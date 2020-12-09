@@ -1,38 +1,193 @@
-.App {
+/* отступы от крайов для всей страницы */
+.wrapper {
+  margin: 10px 15px 10px 15px;
+}
+
+/* Стили для шапки */
+header {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #81987A;
+  height: 27px;
+  width: 100%;
+  position: relative;
+  z-index:2000;
+  border-radius: 30px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* стили для иконки корзины */
+.shoppingСart {
+  float: right;
+  padding-right: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* стили для блоков с товарами */
+.ProductDiv {
+  width: 100% auto;
+  height: 121px;
+  background-color: #E6FCD1;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 25px;
+  margin-right: 35px;
+  margin-left: 35px;
+  
+}
+.ProductDiv div {
+  align-self: center;
+  justify-self: center;
+}
+
+/* стили для страницы с описанием товара */
+.DescriptionProduct {
+  background-color: #E6FCD1;
+  width: 100% auto;
+  min-height: 78vh;
+  margin-top: 10px;
+  border-radius: 50px;
+  padding: 40px;
+  display: grid;
+  grid-template-areas: 
+  "s b n"
+  "d d d";
+  /* grid-template-columns: 1fr 6fr 1fr; */
+}
+.sImages {
+  grid-area: s;
+}
+/* для картинки товара в ней */
+.bImage {
+  position: relative;
+  grid-area: b;
+  background: url(./images/keyboard-big.png) no-repeat;
+  /* background-size: 100%; */
+  width: 362px;
+  height: 215px;
+}
+.pName {
+  grid-area: n;
+  justify-self: center;
+  font-size: 22px;
+  line-height: 26px;
+}
+.pDescription {
+  grid-area: d;
+  width: 80%;
+}
+/* для точек на картинке */
+.points {
+  position: absolute;
+  min-width: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  bottom: 0;
+  left: 35%;
+  right: 35%;
+}
+.point {
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+  background-color: gray;
+  border-radius: 50%;
+}
+/* для выбраной точки */
+.activ{
+  background-color: black;
+}
+
+/* зелёный по темнее (для кнопок) */
+.dGrin {
+  background: #81987A;
+}
+/* и по светлее */
+.lGrin {
+  background: #13B48D;
+}
+
+/* общие стили для кнопок */
+.button {
+  width: 150px;
+  height: 27px;
+  border-radius: 50px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  border: 0;
+}
+
+/* стили для менюшки корзины */
+.shoppСart {
+  position: fixed;
+  width: 188px;
+  background-color: white;
+  right: 5px;
+  top: 5px;
+  bottom: 15px;
+  padding-top: 8px;
+}
+
+/* для блока оформления покупки */
+.purchase {
+  border-top: 1px solid black;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  color: black;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* для выбраных товаров */
+.miniProductDiv {
+  background: #E6FCD1;
+  display: grid;
+  font-size: 12px;
+  color: #000;
+  line-height: 14px;
+  grid-template-columns: 3fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 5px;
+  border-radius: 50px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+/* круг с крестиком (кнопка для удаления всех товаров) */
+.circle {
+  width: 25px;
+  height: 25px;
+  padding: 1px;
+  margin-top: 2px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #43A948;
+  color: #43A948;
+  background-color: #E6FCD1;
+}
+/* общие стили для кнопок добавления и удаления товаров */
+.plus, .minus {
+  background-color: #43A948;
+  width: 10px;
+  height: 16px;
+  padding: 1px;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+}
+.plus {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+}
+.minus {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  margin-left: 85%;
+}
+
+/* отступ справа 195px */
+.margin195 {
+  margin-right: 195px;
+}
+/* и 225px */
+.margin225 {
+  margin-right: 225px;
 }

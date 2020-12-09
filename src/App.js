@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import shoppingСart from './images/shopping-cart.svg'
+import { Route, Switch } from 'react-router-dom'
+import { ProductDiv } from './components/ProductDiv'
+import { DescriptionProduct } from './components/DescriptionProduct'
+import { ShoppСart } from './ShoppСart'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return<div className='wrapper'>
+    <header>
+      <span>
+        {'Главнвя'}
+      </span>
+      <img src={shoppingСart} alt='корзина' className='shoppingСart'/>
+      <ShoppСart/>
+    </header>
+    <main>
+      <Switch>
+        <Route exact path='/'>
+          <ProductDiv/>
+          <ProductDiv/>
+          <ProductDiv/>
+        </Route>
+        <Route path='/product' render={() => <DescriptionProduct/>} />
+        <Route path='*' render={() => <>404 NOT FOUND</>} />
+      </Switch>
+    </main>
+  </div>
 }
 
-export default App;
+export default App
