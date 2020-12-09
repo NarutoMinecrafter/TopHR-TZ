@@ -51,19 +51,19 @@ header {
   grid-template-areas: 
   "s b n"
   "d d d";
-  /* grid-template-columns: 1fr 6fr 1fr; */
 }
 .sImages {
   grid-area: s;
 }
+/* для боковых картинок */
+.sImages div img {
+  width: 73px;
+  height: 42px;
+  border-radius: 50px;
+}
 /* для картинки товара в ней */
 .bImage {
-  position: relative;
   grid-area: b;
-  background: url(./images/keyboard-big.png) no-repeat;
-  /* background-size: 100%; */
-  width: 362px;
-  height: 215px;
 }
 .pName {
   grid-area: n;
@@ -190,4 +190,12 @@ header {
 /* и 225px */
 .margin225 {
   margin-right: 225px;
+}
+
+.back {
+  float: left;
+  font-size: 15px;
+  color: #000;
+  margin-top: 4px;
+  margin-left: 15px;
 }

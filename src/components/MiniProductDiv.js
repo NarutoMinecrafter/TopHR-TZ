@@ -1,4 +1,4 @@
-import keyboardMicro from './images/keyboard-micro.png'
+import keyboardMicro from '.././images/keyboard.png'
 
 // компонент товаров добавленых в корзину
 export const MiniProductDiv = () => {
