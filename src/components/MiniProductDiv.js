@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { addElement } from '../BLL/products-reducer'
 import { addOne, addToLocalStorage, deleteOne, deleteProduct } from '../BLL/shopping-cart-reducer'
 
 // компонент товаров добавленых в корзину
@@ -6,6 +7,7 @@ export const MiniProductDiv = (props) => {
 
 
   const f1 = () => {
+    dispatch(addElement(props.name, props.quantity))
     dispatch(deleteProduct(props.name))
     dispatch(addToLocalStorage())
   }

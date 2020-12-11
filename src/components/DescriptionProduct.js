@@ -17,7 +17,7 @@ export const DescriptionProduct = (props) => {
     }
 
     useEffect(() => { 
-      JSON.parse(localStorage.getItem('cart')).find(item => {
+      JSON.parse(localStorage.getItem('cart')).filter(item => {
         if (item.name === props.name && item.quantity > 0 ) dispatch(deleteElement(props.name, item.quantity))
       })
     }, [])

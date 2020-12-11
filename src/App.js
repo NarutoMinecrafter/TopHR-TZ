@@ -10,6 +10,8 @@ import { addToLocalStorage, clear, synchronization } from './BLL/shopping-cart-r
 
 const App = () => {
 
+  if (!localStorage.getItem('cart')) localStorage.setItem('cart', '[]')
+
   const pathname = useLocation().pathname
 
   useEffect(() => {}, [pathname])
