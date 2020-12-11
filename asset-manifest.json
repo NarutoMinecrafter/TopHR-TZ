@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TopHR-TZ/static/css/main.d792aa32.chunk.css",
-    "main.js": "/TopHR-TZ/static/js/main.7b6b1f95.chunk.js",
-    "main.js.map": "/TopHR-TZ/static/js/main.7b6b1f95.chunk.js.map",
+    "main.css": "/TopHR-TZ/static/css/main.44739cda.chunk.css",
+    "main.js": "/TopHR-TZ/static/js/main.dcad8b6b.chunk.js",
+    "main.js.map": "/TopHR-TZ/static/js/main.dcad8b6b.chunk.js.map",
     "runtime-main.js": "/TopHR-TZ/static/js/runtime-main.cb10641e.js",
     "runtime-main.js.map": "/TopHR-TZ/static/js/runtime-main.cb10641e.js.map",
-    "static/js/2.b4771b49.chunk.js": "/TopHR-TZ/static/js/2.b4771b49.chunk.js",
-    "static/js/2.b4771b49.chunk.js.map": "/TopHR-TZ/static/js/2.b4771b49.chunk.js.map",
+    "static/js/2.846633d9.chunk.js": "/TopHR-TZ/static/js/2.846633d9.chunk.js",
+    "static/js/2.846633d9.chunk.js.map": "/TopHR-TZ/static/js/2.846633d9.chunk.js.map",
     "index.html": "/TopHR-TZ/index.html",
-    "static/css/main.d792aa32.chunk.css.map": "/TopHR-TZ/static/css/main.d792aa32.chunk.css.map",
-    "static/js/2.b4771b49.chunk.js.LICENSE.txt": "/TopHR-TZ/static/js/2.b4771b49.chunk.js.LICENSE.txt",
+    "static/css/main.44739cda.chunk.css.map": "/TopHR-TZ/static/css/main.44739cda.chunk.css.map",
+    "static/js/2.846633d9.chunk.js.LICENSE.txt": "/TopHR-TZ/static/js/2.846633d9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/TopHR-TZ/static/media/Rectangle 1.b940e3bd.png",
     "static/media/keyboard.bd16921b.png": "/TopHR-TZ/static/media/keyboard.bd16921b.png",
     "static/media/mouse.e2194958.png": "/TopHR-TZ/static/media/mouse.e2194958.png",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cb10641e.js",
-    "static/js/2.b4771b49.chunk.js",
-    "static/css/main.d792aa32.chunk.css",
-    "static/js/main.7b6b1f95.chunk.js"
+    "static/js/2.846633d9.chunk.js",
+    "static/css/main.44739cda.chunk.css",
+    "static/js/main.dcad8b6b.chunk.js"
   ]
 }
