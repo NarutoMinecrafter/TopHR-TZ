@@ -23,12 +23,6 @@ export const ProductDiv = (props) => {
     })
   }, [])
 
-  // const f = () => {
-  //   if (JSON.parse(localStorage.getItem('cart')).find(item => item.name === props.name)) {
-  //     console.log('ddd')
-  //   } 
-  // }
-
   return <div className={`ProductDiv ${props.isActive &&'margin225'}`}>
     <div>
       <Link to={`product/${props.name}`} >
