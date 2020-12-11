@@ -6,7 +6,7 @@ import { DescriptionProduct } from './components/DescriptionProduct'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { MiniProductDiv } from './components/MiniProductDiv'
-import { clear } from './BLL/shopping-cart-reducer'
+import { addToLocalStorage, clear, synchronization } from './BLL/shopping-cart-reducer'
 
 const App = () => {
 
@@ -26,6 +26,14 @@ const App = () => {
     if(a[i]) sum += a[i]
   }
 
+  useEffect(() => { dispatch(synchronization(JSON.parse(localStorage.getItem('cart')))) }, [])
+  const fClear = () => {
+    dispatch(clear())
+    dispatch(addToLocalStorage())
+  }
+
+  let c = JSON.parse(localStorage.getItem('cart'))
+
 return<div className='wrapper'>
     <header>
       {pathname !== '/' && <Link to='/'> <div className='back' >{'< на главную'}</div> </Link> }
@@ -42,7 +50,7 @@ return<div className='wrapper'>
             <div>{'(сумма всех вещей в корзине)'}</div>
             <br />
             <div>К оплате: {sum}$</div>
-            <button disabled={sum <= 0} className='button dGrin' onClick={() => dispatch(clear())} >Оформить заказ</button>
+            <button disabled={sum <= 0} className='button dGrin' onClick={fClear} >Оформить заказ</button>
           </div>
         </div>
       )}

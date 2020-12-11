@@ -36,7 +36,7 @@ const productsReducer = (state = initialState, action) => {
             ...state,
             product: state.product.map((u) => {
                 if (u['name'] === action.name) {
-                    return { ...u, quantity: u['quantity'] - 1 }
+                    return { ...u, quantity: u['quantity'] - action.n }
                 }
                 return u
             })
@@ -45,7 +45,7 @@ const productsReducer = (state = initialState, action) => {
             ...state,
             product: state.product.map((u) => {
                 if (u['name'] === action.name) {
-                    return { ...u, quantity: u['quantity'] + 1 }
+                    return { ...u, quantity: u['quantity'] + action.n }
                 }
                 return u
             })
@@ -54,7 +54,7 @@ const productsReducer = (state = initialState, action) => {
     }
 }
 
-export const deleteElement = (name) => ({ type: 'DELETE_ELEMENT', name })
-export const addElement = (name) => ({ type: 'ADD_ELEMENT', name })
+export const deleteElement = (name, n) => ({ type: 'DELETE_ELEMENT', name, n })
+export const addElement = (name, n) => ({ type: 'ADD_ELEMENT', name, n })
 
 export default productsReducer
