@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { MiniProductDiv } from './components/MiniProductDiv'
 import { addToLocalStorage, clear, synchronization } from './BLL/shopping-cart-reducer'
+import { addElement } from './BLL/products-reducer'
 
 const App = () => {
 
@@ -32,9 +33,10 @@ const App = () => {
   const fClear = () => {
     dispatch(clear())
     dispatch(addToLocalStorage())
+    shopProduct.forEach((item) => {
+      dispatch(addElement(item.name, item.quantity))
+    })
   }
-
-  let c = JSON.parse(localStorage.getItem('cart'))
 
 return<div className='wrapper'>
     <header>
