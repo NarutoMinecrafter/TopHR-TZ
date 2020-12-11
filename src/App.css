@@ -182,6 +182,10 @@ header {
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   margin-left: 85%;
 }
+.miniProductDiv div img {
+  width: 63px;
+  height: 26px;
+}
 
 /* отступ справа 195px */
 .margin195 {

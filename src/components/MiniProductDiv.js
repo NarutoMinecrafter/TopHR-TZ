@@ -1,15 +1,25 @@
-import keyboardMicro from '.././images/keyboard.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { addOne, deleteOne, deleteProduct } from '../BLL/shopping-cart-reducer'
 
 // компонент товаров добавленых в корзину
-export const MiniProductDiv = () => {
+export const MiniProductDiv = (props) => {
+  
+  const dispatch = useDispatch()
+  const product = useSelector(state => state.products.product)
+  
+  let isDisabled = false
+  product.forEach((item) => {
+    if(item.name === props.name && item.quantity === 0) isDisabled = true
+  })
+
   return <div className='miniProductDiv'>
-    <div>{'название'}</div>
-    <div>{'цена/шт'}</div>
-    <button className='circle'>✖</button>
+    <div>{props.name}</div>
+    <div>{`${props.price}$/шт`}</div>
+    <button className='circle' onClick={() => dispatch(deleteProduct(props.name))} >✖</button>
     <div></div>
-    <div><img src={keyboardMicro} alt='клавиатура' /></div>
-    <button className='minus'>{'-'}</button>
-    <div>{'1'}</div>
-    <button className='plus'>{'+'}</button>
+    <div><img src={props.photo} alt={props.name} /></div>
+    <button className='minus' onClick={() => dispatch(deleteOne(props.name))} >-</button>
+    <div>{props.quantity}</div>
+    <button disabled={isDisabled} className='plus' onClick={() => dispatch(addOne(props.name))} >+</button>
   </div>
 }
